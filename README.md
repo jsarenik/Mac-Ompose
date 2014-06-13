@@ -28,3 +28,4 @@ Links
  - http://uscustom.sourceforge.net/
  - https://pqrs.org/macosx/keyremap4macbook/xml.html.en#vkopenurldef
  - http://lolengine.net/blog/2012/06/17/compose-key-on-os-x
+ - http://cgit.freedesktop.org/xorg/lib/libX11/tree/nls/en_US.UTF-8/Compose.pre
