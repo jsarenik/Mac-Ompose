@@ -2,6 +2,8 @@ Mac-Ompose
 ==========
 
 Compose key on Mac OS X
+Used almost daily on 10.10.1 (Yosemite). Feel free to contact
+me if you have any issues.
 
 Installation
 ------------
