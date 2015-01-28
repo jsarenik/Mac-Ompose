@@ -1,16 +1,16 @@
-#!/bin/sh -xe
+#!/bin/sh -e
 
+APP=Karabiner
 OUTDIR="$HOME/Library/KeyBindings"
-REMDIR="$HOME/Library/Application Support/KeyRemap4MacBook"
+REMDIR="$HOME/Library/Application Support/$APP"
 
-ls /Applications/KeyRemap4MacBook.app/Contents/MacOS/KeyRemap4MacBook || {
+ls /Applications/$APP.app/Contents/MacOS/$APP || {
   cat <<-EOF
-	Install KeyRemap4MacBook first!
-	https://pqrs.org/macosx/keyremap4macbook
+	Please install $APP first!
 	EOF
   exit 1
 }
 
 mkdir -p $OUTDIR
-cp DefaultKeyBinding.dict "$OUTDIR/DefaultKeyBinding.dict"
-cp private.xml "$REMDIR/private.xml"
+cp -v DefaultKeyBinding.dict "$OUTDIR/DefaultKeyBinding.dict"
+cp -v private.xml "$REMDIR/private.xml"
