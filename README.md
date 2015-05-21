@@ -1,9 +1,10 @@
 Mac-Ompose
 ==========
 
-Compose key on Mac OS X
-Used almost daily on 10.10.1 (Yosemite). Feel free to contact
-me if you have any issues.
+Compose key on Mac OS X.
+
+Used almost daily on 10.10.3 (Yosemite).
+Feel free to contact me if you have any issues.
 
 Installation
 ------------
@@ -20,6 +21,13 @@ Hacking
 -------
 
 If you want to hack more, have a look into misc directory.
+
+Gotchas
+-------
+
+It generally works, but in applications that eat the `<F13>` key
+(like MacVim or iTerm) it does not work. If you have any ready
+solutions, please let me know.
 
 Links
 -----
