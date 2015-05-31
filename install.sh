@@ -11,6 +11,6 @@ ls /Applications/$APP.app/Contents/MacOS/$APP || {
   exit 1
 }
 
-mkdir -p $OUTDIR
+mkdir -p $OUTDIR "$REMDIR"
 cp -v DefaultKeyBinding.dict "$OUTDIR/DefaultKeyBinding.dict"
 cp -v private.xml "$REMDIR/private.xml"
