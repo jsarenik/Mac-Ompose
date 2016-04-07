@@ -9,13 +9,10 @@ Feel free to contact me if you have any issues.
 Installation
 ------------
 
-First download and install Karabiner from
-https://pqrs.org/osx/karabiner/
-
-Run ./install.sh
-
-Finally in Karabiner Preferences window on Change Key tab
-enable "Send F13 for Right Command (Mac-Ompose)"
+  * Install Karabiner from https://pqrs.org/osx/karabiner/
+  * Run `./install.sh`
+  * Karabiner Preferences window on `Change Key` tab
+    enable `Send F13 for Right Command (Mac-Ompose)`
 
 Hacking
 -------
