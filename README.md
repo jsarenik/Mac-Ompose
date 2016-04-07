@@ -13,6 +13,7 @@ Installation
   * Run `./install.sh`
   * Karabiner Preferences window on `Change Key` tab
     enable `Send F13 for Right Command (Mac-Ompose)`
+  * Restart your user session (log out and in again).
 
 Hacking
 -------
