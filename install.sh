@@ -3,6 +3,7 @@
 APP=Karabiner
 OUTDIR="$HOME/Library/KeyBindings"
 REMDIR="$HOME/Library/Application Support/$APP"
+mkdir -p $OUTDIR "$REMDIR"
 
 ls /Applications/$APP.app/Contents/MacOS/$APP || {
   cat <<-EOF
@@ -11,6 +12,11 @@ ls /Applications/$APP.app/Contents/MacOS/$APP || {
   exit 1
 }
 
-mkdir -p $OUTDIR "$REMDIR"
-cp -v DefaultKeyBinding.dict "$OUTDIR/DefaultKeyBinding.dict"
-cp -v private.xml "$REMDIR/private.xml"
+# Copy and back up
+cpnbu() {
+  test -s $1 && cmp $1 ${1#*/} || cp -v $1 $1-old
+  cp -v ${1#*/} $1
+}
+
+cpnbu "$OUTDIR/DefaultKeyBinding.dict"
+cpnbu "$REMDIR/private.xml"
