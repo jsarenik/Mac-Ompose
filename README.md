@@ -3,7 +3,7 @@ Mac-Ompose
 
 Compose key on Mac OS X.
 
-Used almost daily on 10.10.3 (Yosemite).
+Tested on 10.11.5 (Yosemite) and Karabiner-10.21.0.
 Feel free to contact me if you have any issues.
 
 Installation
