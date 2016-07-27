@@ -5,7 +5,7 @@ OUTDIR="$HOME/Library/KeyBindings"
 REMDIR="$HOME/Library/Application Support/$APP"
 mkdir -p "$OUTDIR" "$REMDIR"
 
-ls /Applications/$APP.app/Contents/MacOS/$APP || {
+ls /Applications/$APP.app/Contents/MacOS/$APP >/dev/null || {
   cat <<-EOF
 	Please install $APP first!
 	EOF
