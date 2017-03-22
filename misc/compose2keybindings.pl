@@ -1,5 +1,5 @@
 #!/usr/bin/perl
-use strict;
+# use strict;
 use warnings;
 use 5.010;
 
@@ -43,7 +43,7 @@ sub parseline {
 	}
 
 	return unless @tokens;
-			
+
 	my $colonidx = firstidx { $_ eq ':' } @tokens;
 
 	my @events = @tokens[0 .. $colonidx-1];
@@ -125,7 +125,21 @@ sub output {
 		}
 	}
 	else {
-		printf '("insertText:", "\U%04X");', ord $data;
+		print "\n";
+		my $chr;
+		print "\n";
+		printf '("insertText:", "';
+		for $chr (split //, $data) {
+			if (ord $chr > 0xffff) {
+				printf("\\U%04X\\U%04X",
+					(ord($chr)-0x10000) / 0x400 + 0xD800,
+					(ord($chr)-0x10000) % 0x400 + 0xDC00);
+			}
+			else {
+			    printf("\\U%04X",ord $chr);
+			}
+		}
+		print('"); ');
 		print ' /* ';
 		print join(', ', map { ord $_ == $composekey ? 'Compose' : charnames::viacode(ord $_) // 'unknown' } @stack);
 		print ': ';
@@ -133,4 +147,4 @@ sub output {
 		print ' */';
 		print "\n";
 	}
-}	
+}
