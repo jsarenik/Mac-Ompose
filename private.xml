@@ -1,8 +1,0 @@
-<?xml version="1.0"?>
-<root>
-  <item>
-    <name>Send F13 for Right Command (Mac-Ompose)</name>
-    <identifier>private.send_f13_for_rcmd</identifier>
-    <autogen>__KeyToKey__ KeyCode::COMMAND_R, KeyCode::F13</autogen>
-  </item>
-</root>

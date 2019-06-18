@@ -1,8 +1,8 @@
 #!/bin/sh -e
 
-APP=Karabiner
+APP=Karabiner-Elements
 OUTDIR="$HOME/Library/KeyBindings"
-REMDIR="$HOME/Library/Application Support/$APP"
+REMDIR="$HOME/.config/karabiner"
 mkdir -p "$OUTDIR" "$REMDIR"
 
 ls /Applications/$APP.app/Contents/MacOS/$APP >/dev/null || {
@@ -20,4 +20,4 @@ cpnbu() {
 }
 
 cpnbu "$OUTDIR/DefaultKeyBinding.dict"
-cpnbu "$REMDIR/private.xml"
+cpnbu "$REMDIR/karabiner.json"
