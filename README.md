@@ -4,7 +4,8 @@ Mac-Ompose
 Compose key on macOS. Completely X Window-like.
 
 Note this contains my modifications which you may need to modify.
-My settings are: CapsLock is Left Control, Compose is Right Command.
+My settings are: CapsLock real key is Left Control and Right Command
+real key is Compose in the end.
 
 Tested on 10.14.5 (Mojave) and Karabiner-Elements 12.5.1.
 Feel free to contact me if you have any issues.
